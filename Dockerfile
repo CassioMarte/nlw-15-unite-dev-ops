@@ -10,8 +10,8 @@ FROM base AS dependencies
 # abro o pasta onde quero trabalhar 
 WORKDIR /usr/src/app
 
-# copio os arquivos de pacotes
-COPY package.json  pnpm-lock.yaml ./
+# copio os arquivos de pacotes pnpm-lock.yaml ./
+COPY package.json  package-lock.json ./
 
 # rodo o install dos pacotes
 RUN pnpm install

@@ -29,3 +29,7 @@ code --install-extension ms-python.vscode-pylance
 code --install-extension eamodio.gitlens 
 code --install-extension usernamehw.errorlens
 
+## comandos 
+
+docker compose up --build -d 
+

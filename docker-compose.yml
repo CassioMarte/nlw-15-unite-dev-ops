@@ -25,6 +25,7 @@ services:
     environment:
       - DATABASE_URL=postgresql://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgres:5432/${POSTGRES_DB}
       - API_BASE_URL=http://localhost:3333
+      # Waiting pesqisar 
     depends_on:
       - postgres
     networks:
