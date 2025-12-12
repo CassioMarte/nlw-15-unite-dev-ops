@@ -29,4 +29,11 @@ jobs:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
         # dados de secrets são colocados no action/secrets
+
+    - name: Push image
+      run: |
+        docker push danielrodriguess/nlw.service.passin:${{ steps.generate_sha.outputs.sha }}
+
+        docker tag danielrodriguess/nlw.service.passin:${{ steps.generate_sha.outputs.sha }} danielrodriguess/nlw.service.passin:latest
         
+        docker push danielrodriguess/nlw.service.passin:latest    
